@@ -1,13 +1,13 @@
-Cypress.Commands.add('submitForm', (name, email, password, gender, formattedBirthdate, number, streetAddress, state, city) => { 
-    cy.get('#name').type(name, {force: true})
-    cy.get('#email').type(email, {force: true})
-    cy.get('#password').type(password)
-    cy.get('#gender').type(gender)
-    cy.get('#birthdate').type(formattedBirthdate)
-    cy.get('#phone').type(number)
-    cy.get('#address').type(streetAddress)
-    cy.get('#state').select(state)
-    cy.get('#city').type(city)
+Cypress.Commands.add('submitForm', (name, email, password, gender, birthdate, number, streetAddress, state, city) => { 
+    cy.get('#name').should('be.visible').and('have.value', '').type(name, {force: true})
+    cy.get('#email').should('be.visible').and('have.value', '').type(email, {force: true})
+    cy.get('#password').should('be.visible').and('have.value', '').type(password, {log: false})
+    cy.get('#gender').should('be.visible').type(gender)
+    cy.get('#birthdate').should('be.visible').and('have.value', '').type(birthdate)
+    cy.get('#phone').should('be.visible').and('have.value', '').type(number)
+    cy.get('#address').should('be.visible').and('have.value', '').type(streetAddress)
+    cy.get('#state').should('be.visible').and('have.value', '').select(state)
+    cy.get('#city').should('be.visible').type(city)
 
 })
 
