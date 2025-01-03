@@ -1,6 +1,6 @@
 # Cypress Test Automation Project
 
-This repository contains the automated tests developed for the user registration form, using **Cypress** and **Faker.js** to generate random data. It is part of a mentorship project focused on test automation practices.
+This repository contains the automated tests developed for the user registration form, using **Cypress** and **Faker.js** to generate random data. It is part of a mentorship project focused on test automation practices, guided by Alexandre Silva.
 
 ## Prerequisites
 
