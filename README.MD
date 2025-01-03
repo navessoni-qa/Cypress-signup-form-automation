@@ -73,22 +73,6 @@ If you want to run the tests directly in the terminal, use the following command
 
 This project uses custom commands to automate the form submission process.
 
-### Example of Custom Command
-
-````javascript
-Cypress.Commands.add('submitForm', (name, email, password, gender, formattedBirthdate, number, streetAddress, state, city) => {
-cy.get('#name').type(name, {force: true})
-cy.get('#email').type(email, {force: true})
-cy.get('#password').type(password)
-cy.get('#gender').type(gender)
-cy.get('#birthdate').type(formattedBirthdate)
-cy.get('#phone').type(number)
-cy.get('#address').type(streetAddress)
-cy.get('#state').select(state)
-cy.get('#city').type(city)
-})
-````
-
 ## Contribution
 
 If you’d like to contribute improvements or fixes, feel free to open a **Pull Request** or report an **Issue**.
